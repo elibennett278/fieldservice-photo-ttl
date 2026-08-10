@@ -1,0 +1,6 @@
+{
+  "name": "fieldservice-photo-ttl",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --experimental-strip-types test/fieldservice_lifecycle.test.ts", "expire": "node --experimental-strip-types src/expire_work_order_photos.ts" }
+}

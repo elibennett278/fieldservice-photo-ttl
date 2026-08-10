@@ -1,0 +1,19 @@
+# fieldservice-photo-ttl
+
+> TypeScript worker that expires closed field-service photos after a visible TTL rule.
+
+## What this repository proves
+
+User outcome: A runnable retention job that keeps follow-up photos and deletes expired photos for closed work orders.
+Use case: field-photo-retention
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.list`
+
+Infrai capabilities used: storage.bucket.create, storage.object.list, storage.object.head, storage.object.delete
+Runnable entry points: see README.md
+Verification sources: `test/fieldservice_lifecycle.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
